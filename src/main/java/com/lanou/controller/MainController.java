@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.swing.border.CompoundBorder;
 import java.util.List;
 
 /**
@@ -41,9 +42,21 @@ public class MainController {
     }
 
 
+    //编辑代码
+    @RequestMapping(value = "/branch")
+    @ResponseBody
+    public String branchTest(){
+
+        return "branch";
+    }
 
 
+    public String aaa(){
+        //啊啊啊啊啊啊啊啊啊啊
+        return "aaaa";
 
+
+    }
 
 
 }
