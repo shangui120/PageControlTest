@@ -20,8 +20,9 @@ import java.util.List;
 public class MainController {
     @Resource
     private MessageService service;
+
     @RequestMapping(value = "/")
-    public String frontPage(){
+    public String frontPage() {
         List<Message> allMsg = service.findAllMsg();
         System.out.println(allMsg);
 
@@ -30,14 +31,14 @@ public class MainController {
 
     @RequestMapping(value = "/pagetest")
     @ResponseBody
-    public PageInfo<Message> pagetest(@RequestParam("pageNum")Integer pageNum,
-                                      @RequestParam("pageSize")Integer pageSize){
-        return service.queryPage(pageNum,pageSize);
+    public PageInfo<Message> pagetest(@RequestParam("pageNum") Integer pageNum,
+                                      @RequestParam("pageSize") Integer pageSize) {
+        return service.queryPage(pageNum, pageSize);
     }
 
     @RequestMapping(value = "/test")
     @ResponseBody
-    public String gittest(){
+    public String gittest() {
         return "bbb";
     }
 
@@ -45,14 +46,17 @@ public class MainController {
     //编辑代码
     @RequestMapping(value = "/branch")
     @ResponseBody
-    public String branchTest(){
+    public String branchTest() {
 
         return "branch";
     }
 
 
-    public String aaa(){
-        return "aaaa";
+    public String aaa() {
+
+        System.out.println("测试冲突");
+        return null;
     }
+
 
 }
